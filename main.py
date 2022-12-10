@@ -1,20 +1,22 @@
 import datetime
 import glob
-from protocol_phases import enrollment, authentication
 import multiprocessing as mp
+import time
+
 from os import remove
 from os.path import exists
-import time
+
 from nofakes import head_txt_csr_file, numerical_sort, mk_dir
+from protocol_phases import enrollment, authentication
 
 N_CORES = 1
 
 TODAY = str(datetime.date.today()).replace('-', '')
 
-data_folder_path = '/results/' + TODAY + '/'
+data_folder_path = 'results/' + TODAY + '/'
 mk_dir(data_folder_path)
 
-csr_responses_path = '/dataset/csr_responses/'
+csr_responses_path = 'dataset/csr_responses/'
 cases = ['case1', 'case2']
 distance = ' intra'
 stages = ['Enrollment', 'Authentication']

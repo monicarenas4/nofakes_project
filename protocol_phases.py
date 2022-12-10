@@ -2,16 +2,18 @@ import datetime
 import pandas as pd
 import re
 import time
-from image_processing import blob_extraction, robust_positions
+
 from os.path import exists
 from random import randint
+
+from nofakes import blob_extraction, robust_positions
 from nofakes import sign_key_gen, digital_signature, verification
 from nofakes import generation, reproduction, secure_sketch, reconstruction
 from nofakes import mk_dir
 
 TODAY = str(datetime.date.today()).replace('-', '')
 
-ssk_folder_path = '/secure_sketch/' + TODAY + '/'
+ssk_folder_path = 'secure_sketch/' + TODAY + '/'
 mk_dir(ssk_folder_path)
 
 
