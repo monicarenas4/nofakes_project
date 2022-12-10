@@ -1,0 +1,13 @@
+ecdsa
+glob
+hashlib
+pandas
+random
+re
+opencv-python
+scikit-image
+scipy
+numpy
+imutils
+hashlib
+nofakes
