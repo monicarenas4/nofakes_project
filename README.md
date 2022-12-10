@@ -16,7 +16,10 @@ Start the python shell and run the following command line:
 ```python
 from nofakes import dataset_generation
 
-dataset_generation()
+reference_images_path = 'dataset/reference_images/'
+database_path = 'dataset/csr_responses/'
+
+dataset_generation(reference_images_path, database_path)
 ```
 
 ## main.py
